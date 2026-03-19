@@ -1,0 +1,42 @@
+appId: com.example.app # Random app id
+
+
+# Create a task assigned to Alice for the databaseProject
+---
+# Launch the app
+- launchApp:
+    clearState: true
+
+# Step 1: Open a Project in this example a DatabaseProject
+- tapOn: "Database Project"
+
+# Step 2: Create Task in the board, in this case Planning board
+- tapOn: "Create Task in Planning"
+
+# Step 3: Fill in the Task form
+- tapOn: "Task Name"
+- inputText: "UML Diagram"
+
+- tapOn: "Description"
+- inputText: "Make the UML Diagram for the theme of the project"
+
+- tapOn: "Deadline"
+- inputText: "20/03/2026"
+
+# Step 4: Assign Member, in this case Alice
+- tapOn: "Select a team member"
+- tapOn: "Alice"
+
+# Step 5: Create the task
+- tapOn: "Create Task"
+
+# Step 6: Verify results
+
+# Task appears in board
+- assertVisible: "UML Diagram"
+
+# Assigned member is shown 
+- assertVisible: "Alice"
+
+# Deadline appears
+- assertVisible: "20/03/2026"
