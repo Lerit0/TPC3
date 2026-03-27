@@ -1,0 +1,6 @@
+appId: com.gabriel.helloapp
+---
+- launchApp:
+    clearState: true
+
+- assertVisible: Hi! my name is Gabriel

@@ -1,6 +1,5 @@
 appId: com.example.app # Random app id
 
-
 # Create a task assigned to Alice for the databaseProject
 ---
 # Launch the app
